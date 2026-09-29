@@ -1,0 +1,240 @@
+:host {
+  display: block;
+}
+
+/* ====================== FORMULÁRIO ====================== */
+
+.ficha {
+  background: var(--cartao);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 26px 28px 22px;
+}
+
+/* ====================== SEÇÕES ====================== */
+
+fieldset {
+  border: 0;
+  border-top: 1px solid var(--linha);
+  padding: 0;
+  margin: 0 0 22px;
+}
+
+legend {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--azul);
+  padding: 0 10px 0 0;
+}
+
+/* ====================== CAMPOS ====================== */
+
+.campo {
+  margin-top: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  font: inherit;
+  font-size: 15px;
+
+  padding: 9px 11px;
+
+  border: 1px solid #c6ced6;
+  border-radius: 6px;
+
+  background: #fff;
+  color: inherit;
+
+  transition:
+    border-color 0.14s ease,
+    box-shadow 0.14s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--tinta-3);
+}
+
+/* ====================== FOCO ====================== */
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+
+  border-color: var(--azul-claro);
+
+  box-shadow:
+    0 0 0 3px rgba(29, 90, 168, 0.16);
+}
+
+/* ====================== AÇÕES ====================== */
+
+.acoes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+button {
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  padding: 11px 30px;
+
+  border-radius: 6px;
+  border: 1px solid var(--azul);
+
+  background: var(--azul);
+  color: #fff;
+
+  cursor: pointer;
+
+  transition: background 0.14s ease;
+}
+
+button:hover {
+  background: var(--azul-claro);
+}
+
+button.secundario {
+  background: transparent;
+  color: var(--azul);
+  font-weight: 500;
+}
+
+button.secundario:hover {
+  background: #eef3f9;
+}
+
+/* ====================== RESPONSIVO ====================== */
+
+@media (max-width: 520px) {
+  .ficha {
+    padding: 20px 18px 18px;
+  }
+
+  .acoes {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+
+/* ====================== LISTA DE PESSOAS ====================== */
+
+.pessoas {
+  margin-top: 34px;
+}
+
+.pessoas h2 {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: var(--tinta-2);
+  margin: 0 0 18px;
+}
+
+/* ====================== CARTÃO ====================== */
+
+.cartao {
+  background: var(--cartao);
+  border: 1px solid var(--linha);
+  border-left: 3px solid var(--ouro);
+  border-radius: 8px;
+
+  padding: 16px 18px;
+  margin-bottom: 10px;
+
+  box-shadow: var(--sombra);
+
+  transition:
+    transform 0.14s ease,
+    box-shadow 0.14s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+/* ====================== NOME ====================== */
+
+.cartao h3 {
+  margin: 0 0 12px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: var(--tinta);
+}
+
+/* ====================== INFORMAÇÕES ====================== */
+
+.cartao p {
+  margin: 6px 0;
+
+  color: var(--tinta-2);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.cartao p strong {
+  color: var(--tinta);
+  font-weight: 600;
+}
+
+/* ====================== LISTA VAZIA ====================== */
+
+.vazio {
+  text-align: center;
+
+  color: var(--tinta-3);
+
+  border: 1px dashed var(--linha);
+  border-radius: 8px;
+
+  padding: 22px;
+  margin: 0;
+}
+
+/* ====================== RESPONSIVO ====================== */
+
+@media (max-width: 520px) {
+
+  .pessoas {
+    margin-top: 26px;
+  }
+
+  .cartao {
+    padding: 14px;
+  }
+
+  .cartao h3 {
+    font-size: 16px;
+  }
+
+  .cartao p {
+    font-size: 13.5px;
+  }
+}
