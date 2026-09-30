@@ -4,7 +4,7 @@ export function validarNome(nome: string): string | null {
   }
 
   if (nome.trim().length < 3) {
-    return 'O nome deve possuir pelo menos 3 caracteres.';
+    return 'Digite pelo menos 3 caracteres.';
   }
 
   return null;
@@ -38,15 +38,30 @@ export function validarRg(rg: string): string | null {
   return null;
 }
 
+export function validarTexto(
+  valor: string,
+  nomeCampo: string
+): string | null {
+  if (!valor.trim()) {
+    return `${nomeCampo} é obrigatório.`;
+  }
+
+  if (valor.trim().length < 3) {
+    return `${nomeCampo} deve possuir pelo menos 3 caracteres.`;
+  }
+
+  return null;
+}
+
 export function validarEmail(email: string): string | null {
   if (!email.trim()) {
     return 'O e-mail é obrigatório.';
   }
 
-  const formatoValido =
+  const valido =
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  if (!formatoValido) {
+  if (!valido) {
     return 'Digite um e-mail válido.';
   }
 
